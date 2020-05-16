@@ -1,2 +1,54 @@
-# tf2dev
-Some weird shit for debugging purposes
+# TF2 Developer Commands
+
+Here is a list of some developer commands with their examples. Tested in Team Fortress 2 but some probably work in other source games. Note that most of these commands require `sv_cheats 1` to be enabled and you may need to be server operator to execute these.
+
+Command | Description | Preview
+--- | --- | ---
+`prop_dynamic_create <model path>` | Spawns a prop_dynamic with the given model under your crosshair. | ![Preview](https://i.imgur.com/AR4jVl1.gif)
+`prop_physics_create <model path>` | Spawns a prop_physics with the given model under your crosshair. | ![Preview](https://i.imgur.com/rJywdme.gif)
+`ent_rotate (degrees)` | Rotates the entity under your crosshair by a specified number of degrees. | ![Preview](https://i.imgur.com/31k0n71.gif)
+`ent_create <entity name> (<key1> <value1> <key2> <value2> ...)` | Creates an entity of the given type where the player is looking. Additional parameters can be passed. | ![Preview](https://i.imgur.com/ntLDHfz.gif)
+`ent_remove (target)` | Removes the given entity(s). | ![Preview](https://i.imgur.com/XFJsQY4.gif)
+`ent_remove_all <target>` | Removes all entities of the specified type. | ![Preview](https://i.imgur.com/EUcsV5R.gif)
+`ent_fire <target> <action> (value) (delay)` | Debugging tool to fire inputs from entities. (More on that later)im | ![Preview](https://i.imgur.com/MN2ZQfK.gif)
+`ent_attachments (target)`\* | Displays the attachment points on an entity. | ![Preview](https://i.imgur.com/h3yBKHC.png)
+`ent_bbox (target)`\* | Displays the movement bounding box for the given entity(ies) in orange. Some entites will also display entity specific overlays. | ![Preview](https://i.imgur.com/9H1UM1m.png)
+`ent_absbox (target)`\* | Displays the total bounding box for the given entity(s) in green.  Some entites will also display entity specific overlays. | ![Preview](https://i.imgur.com/8AmSeLX.png)
+`ent_dump <entity/!picker>` | Displays information about the entity in console. | ![Preview](https://i.imgur.com/P1zCXsi.png)
+`ent_info <class>` | Displays inputs/outputs of an entity class in console. | ![Preview](https://b.catgirlsare.sexy/HFiNstBU.png)
+`ent_name (target)`\* | Displays the targetname of an entity. | ![Preview](https://i.imgur.com/Fi5tGrg.png)
+`ent_orient <entity/!picker> (allangles)` | Orient the specified entity to match the player's angles. By default, only orients target entity's YAW. Use the 'allangles' option to orient on all axis. | ![Preview](https://i.imgur.com/EhjzoEm.gif) 
+`ent_pivot (target)`\* | Displays the pivot for the given entity(ies). | ![Preview](https://i.imgur.com/muowNp6.png)
+`ent_show_response_criteria (target)`\* | Print, to the console, an entity's current criteria set used to select responses. | ![Preview](https://i.imgur.com/1Md30GO.png)
+`ent_teleport <entity/!picker>` | Teleport the specified entity to where the player is looking. | ![Preview](https://i.imgur.com/H3YDt35.gif)
+`ent_text (target)`\* | Displays text debugging information about the given entity(ies) on top of the entity. | ![Preview](https://i.imgur.com/HgiCi2m.png)
+`ent_viewoffset (target)`\* | Displays the eye position for the given entity(ies) in red. | ![Preview](https://i.imgur.com/YJh8HFn.png)
+`impulse 106` | Prints classname, targetname and model of entity under crosshair in console. | ![Preview](https://i.imgur.com/Jo7w2Dt.png)
+`impulse 107` | Prints texture under crosshair in console (in CAPS). | ![Preview](https://i.imgur.com/KtfTBLs.png)
+`mat_crosshair` | Prints texture under crosshair in console. | ![Preview](https://i.imgur.com/FrGpltj.png)
+`light_crosshair` | Prints luxel value under crosshair in console. | ![Preview](https://i.imgur.com/w3dw2rX.png)
+`surfaceprop` | Prints information about the prop/brush under crosshair into console. | ![Preview](https://i.imgur.com/LbHISj9.png)
+`+mat_texture_list` | Displays a list of used textures per frame in console. | ![Preview](https://i.imgur.com/g7rw0Ld.png)
+`sv_skyname` | Prints the current name of the skybox texture in console. | ![Preview](https://i.imgur.com/wCqZyJZ.png)
+`snd_show 1` | Prints debug sound information on the top right corner of your screen. | ![Preview](https://i.imgur.com/TXyayP5.png)
+`snd_visualize 1` | Displays soundnames from their location. | ![Preview](https://i.imgur.com/OylhEmS.png)
+`mat_wireframe 1/2/3` | Wireframe rendermode. | ![Preview](https://i.imgur.com/FkQFDxq.png)
+`mat_fullbright 1/2` | Fullbright rendermode. | ![Preview](https://i.imgur.com/iOV1W5k.png)
+`mat_luxels 1` | Draws the luxels on a brush. | ![Preview](https://i.imgur.com/E9kSSjX.png)
+`mat_leafvis 1/3` | Draws the visleafs in wireframe. | ![Preview](https://i.imgur.com/Ws14Etg.png)
+`vcollide_wireframe 1` | Renders collision models in wireframe. | ![Preview](https://i.imgur.com/GxWHVK6.png)
+`map_showspawnpoints` | Renders the map spawnpoints for 60 seconds. | ![Preview](https://i.imgur.com/ysyxa7e.png)
+`r_drawmodellightorigin 1` | Draws lighting origin on rendered models. | ![Preview](https://i.imgur.com/gk3LtVZ.png)
+`r_drawmodelstatsoverlay 1 ` | Displays text debugging information within the radius of a player. `r_drawmodelstatsoverlaydistance <radius>` to change the radius. | ![Preview](https://i.imgur.com/j6iyiQg.png)
+`find_ent <string>` |  Find and list all entities with classnames or targetnames that contain the specified substring. | ![Preview](https://i.imgur.com/jZMcQBM.png)
+`find_ent_index <index>` | Display data for entity matching specified index. | ![Preview](https://i.imgur.com/KumbpqZ.png)
+`dump_particlemanifest` | Shows all loaded particles in console. | ![Preview](https://i.imgur.com/A5zWkc1.png)
+`dumpentityfactories` | Shows all entity factory names in console. | ![Preview](https://i.imgur.com/gSdd04E.png)
+`cl_showents` | Shows all entities currently ingame. | ![Preview](https://i.imgur.com/kNmzlht.png)
+`report_entities` | Shows all entities currently ingame grouped. | ![Preview](https://i.imgur.com/R05lcY2.png)
+`mat_showtextures` | Prints all available textures in console. | ![Preview](https://i.imgur.com/oAxOLz6.png)
+`cl_soundscape_printdebuginfo` | Prints all available client soundscapes in console. | ![Preview](https://i.imgur.com/8gYa5fX.png)
+`clear_debug_overlays`\* | Clears debug overlays seen in developer mode. | ![Preview](https://i.imgur.com/hluk8fV.gif)
+`developer <level>` | Sets the developer message level and puts you into developer mode if higher than 0. | ![Preview](https://i.imgur.com/gzaiEpg.png)
+
+\* - *developer mode only*
