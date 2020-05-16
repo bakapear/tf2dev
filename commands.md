@@ -17,7 +17,7 @@ Command | Description | Preview
 `ent_dump <entity/!picker>` | Displays information about the entity in console. | ![Preview](https://i.imgur.com/P1zCXsi.png)
 `ent_info <class>` | Displays inputs/outputs of an entity class in console. | ![Preview](https://b.catgirlsare.sexy/HFiNstBU.png)
 `ent_name (target)`\* | Displays the targetname of an entity. | ![Preview](https://i.imgur.com/Fi5tGrg.png)
-`ent_orient <entity/!picker> (allangles)` | Orient the specified entity to match the player's angles. By default, only orients target entity's YAW. Use the 'allangles' option to orient on all axis. | ![Preview](https://i.imgur.com/EhjzoEm.gif) 
+`ent_orient <entity/!picker> (allangles)` | Orient the specified entity to match the player's angles. By default, only orients target entity's YAW. Use the 'allangles' option to orient on all axis. | ![Preview](https://i.imgur.com/OJ83UqL.gif) 
 `ent_pivot (target)`\* | Displays the pivot for the given entity(ies). | ![Preview](https://i.imgur.com/muowNp6.png)
 `ent_show_response_criteria (target)`\* | Print, to the console, an entity's current criteria set used to select responses. | ![Preview](https://i.imgur.com/1Md30GO.png)
 `ent_teleport <entity/!picker>` | Teleport the specified entity to where the player is looking. | ![Preview](https://i.imgur.com/H3YDt35.gif)
