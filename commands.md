@@ -10,7 +10,7 @@ Command | Description | Preview
 `ent_create <entity name> (<key1> <value1> <key2> <value2> ...)` | Creates an entity of the given type where the player is looking. Additional parameters can be passed. | ![Preview](https://i.imgur.com/ntLDHfz.gif)
 `ent_remove (target)` | Removes the given entity(s). | ![Preview](https://i.imgur.com/XFJsQY4.gif)
 `ent_remove_all <target>` | Removes all entities of the specified type. | ![Preview](https://i.imgur.com/EUcsV5R.gif)
-`ent_fire <target> <action> (value) (delay)` | Debugging tool to fire inputs from entities. (More on that later)im | ![Preview](https://i.imgur.com/MN2ZQfK.gif)
+`ent_fire <target> <action> (value) (delay)` | Debugging tool to fire inputs from entities. (More on that later) | ![Preview](https://i.imgur.com/MN2ZQfK.gif)
 `ent_attachments (target)`\* | Displays the attachment points on an entity. | ![Preview](https://i.imgur.com/h3yBKHC.png)
 `ent_bbox (target)`\* | Displays the movement bounding box for the given entity(ies) in orange. Some entites will also display entity specific overlays. | ![Preview](https://i.imgur.com/9H1UM1m.png)
 `ent_absbox (target)`\* | Displays the total bounding box for the given entity(s) in green.  Some entites will also display entity specific overlays. | ![Preview](https://i.imgur.com/8AmSeLX.png)
