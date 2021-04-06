@@ -15,7 +15,7 @@ Command | Description | Preview
 `ent_bbox (target)`\* | Displays the movement bounding box for the given entity(ies) in orange. Some entites will also display entity specific overlays. | ![Preview](https://i.imgur.com/9H1UM1m.png)
 `ent_absbox (target)`\* | Displays the total bounding box for the given entity(s) in green.  Some entites will also display entity specific overlays. | ![Preview](https://i.imgur.com/8AmSeLX.png)
 `ent_dump <entity/!picker>` | Displays information about the entity in console. | ![Preview](https://i.imgur.com/P1zCXsi.png)
-`ent_info <class>` | Displays inputs/outputs of an entity class in console. | ![Preview](https://b.catgirlsare.sexy/HFiNstBU.png)
+`ent_info <class>` | Displays inputs/outputs of an entity class in console. | ![Preview](https://i.imgur.com/UJ0aoXW.png)
 `ent_name (target)`\* | Displays the targetname of an entity. | ![Preview](https://i.imgur.com/Fi5tGrg.png)
 `ent_orient <entity/!picker> (allangles)` | Orient the specified entity to match the player's angles. By default, only orients target entity's YAW. Use the 'allangles' option to orient on all axis. | ![Preview](https://i.imgur.com/OJ83UqL.gif) 
 `ent_pivot (target)`\* | Displays the pivot for the given entity(ies). | ![Preview](https://i.imgur.com/muowNp6.png)
