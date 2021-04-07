@@ -16,4 +16,6 @@ Simple script that generates a `defaults.cfg` which sets all variables to their 
 3. Type `differences` and it should only contain no more than 10 commands that cannot be changed to their defaults:
 ![image](https://user-images.githubusercontent.com/13366049/113836852-8b688d80-978d-11eb-9ee9-e61d24f16c6d.png)<br>
 Note: When tabbing out of the game, 3 new command changes happen:<br>
-![image](https://user-images.githubusercontent.com/13366049/113836052-d7670280-978c-11eb-9d56-883a9a93e4eb.png)
+![image](https://user-images.githubusercontent.com/13366049/113837091-c965b180-978d-11eb-86b8-c2a36b92d0d0.png)
+
+
