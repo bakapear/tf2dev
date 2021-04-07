@@ -3,7 +3,6 @@ Simple script that generates a `defaults.cfg` which sets all variables to their 
 
 ### Requirements
 - NodeJS
-- 
 
 ### Generating a proper `defaults.cfg`
 1. Start TF2 and open up the developer console.
