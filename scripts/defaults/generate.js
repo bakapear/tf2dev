@@ -39,14 +39,15 @@ function formatList (list, diffs, out) {
   }
 
   delete LIST.sv_cheats
+  delete LIST.mat_dxlevel
 
   let DIFF = format.diff(diffs)
   Object.assign(LIST, DIFF)
 
   let res = [
-    'sv_cheats 1',
+    'sv_cheats 1', 'mat_dxlevel 0', '',
     ...Object.entries(LIST).map(x => `${x[0]} ${x[1]}`),
-    'sv_cheats 0'
+    '', 'sv_cheats 0'
   ]
 
   fs.writeFileSync(out, res.join('\n'))
