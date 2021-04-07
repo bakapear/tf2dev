@@ -29,8 +29,9 @@ let format = {
   }
 }
 
-function formatList (list, out, differences = null) {
+function formatList (list, diffs, out) {
   if (!fs.existsSync(list)) throw new Error(list + ' not found')
+  if (!fs.existsSync(diffs)) throw new Error(list + ' not found')
   let LIST = format.cvar(list)
 
   for (let key in LIST) {
@@ -39,10 +40,8 @@ function formatList (list, out, differences = null) {
 
   delete LIST.sv_cheats
 
-  if (differences && fs.existsSync(differences)) {
-    let DIFF = format.diff(differences)
-    Object.assign(LIST, DIFF)
-  }
+  let DIFF = format.diff(diffs)
+  Object.assign(LIST, DIFF)
 
   let res = [
     'sv_cheats 1',
@@ -53,4 +52,4 @@ function formatList (list, out, differences = null) {
   fs.writeFileSync(out, res.join('\n'))
 }
 
-formatList('cvarlist.txt', 'defaults.cfg', 'differences.txt')
+formatList('cvarlist.txt', 'differences.txt', 'defaults.cfg')
