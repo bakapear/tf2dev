@@ -31,21 +31,21 @@ let format = {
 
 function formatList (list, diffs, out) {
   if (!fs.existsSync(list)) throw new Error(list + ' not found')
-  if (!fs.existsSync(diffs)) throw new Error(list + ' not found')
   let LIST = format.cvar(list)
 
   for (let key in LIST) {
     if (LIST[key] === 'cmd') delete LIST[key]
   }
 
+  if (diffs && fs.existsSync(diffs)) {
+    Object.assign(LIST, format.diff(diffs))
+  }
+
   delete LIST.sv_cheats
   delete LIST.mat_dxlevel
 
-  let DIFF = format.diff(diffs)
-  Object.assign(LIST, DIFF)
-
   let res = [
-    'sv_cheats 1', 'mat_dxlevel 0', '',
+    'sv_cheats 1', '',
     ...Object.entries(LIST).map(x => `${x[0]} ${x[1]}`),
     '', 'sv_cheats 0'
   ]
