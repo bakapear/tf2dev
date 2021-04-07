@@ -4,6 +4,7 @@ Here is a list of some developer commands with their examples. Tested in Team Fo
 
 Command | Description | Preview
 --- | --- | ---
+`cl_entityreport 0/1` +  `cl_entity_report_sorted 0/1` | Draws entity states on the top left of your screen. | ![Preview](https://i.imgur.com/NeWmMIp.png)
 `prop_dynamic_create <model path>` | Spawns a prop_dynamic with the given model under your crosshair. | ![Preview](https://i.imgur.com/AR4jVl1.gif)
 `prop_physics_create <model path>` | Spawns a prop_physics with the given model under your crosshair. | ![Preview](https://i.imgur.com/rJywdme.gif)
 `ent_rotate (degrees)` | Rotates the entity under your crosshair by a specified number of degrees. | ![Preview](https://i.imgur.com/31k0n71.gif)
